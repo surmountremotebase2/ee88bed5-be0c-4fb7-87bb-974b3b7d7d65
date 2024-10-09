@@ -24,8 +24,8 @@ class TradingStrategy(Strategy):
                 log(f"Price of {ticker} below $100, increasing allocation.")
                 allocation_dict[ticker] = 0.2  # Represents a higher investment, adjust according to your portfolio size and risk appetite
             elif current_price >= 120:
-                log(f"Price of {ticker} above $120, selling 50% of the position.")
-                allocation_dict[ticker] = 0.05  # Reducing allocation to simulate selling 50% of the position; actual calculation depends on your portfolio
+                log(f"Price of {ticker} above $120, selling 10% of the position.")
+                allocation_dict[ticker] = 0.05  # Reducing allocation to simulate selling 10% of the position; actual calculation depends on your portfolio
             else:
                 allocation_dict[ticker] = 0.1  # Standard daily investment allocation
 
