@@ -20,7 +20,7 @@ class TradingStrategy(Strategy):
             ohlcv = data["ohlcv"]
             current_price = ohlcv[-1][ticker]["close"]  # Get the latest close price
             
-            if current_price < 100:
+            if current_price < 90:
                 log(f"Price of {ticker} below $100, increasing allocation.")
                 allocation_dict[ticker] = 0.2  # Represents a higher investment, adjust according to your portfolio size and risk appetite
             elif current_price >= 120:
